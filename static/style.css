@@ -1,0 +1,451 @@
+@layer utilities {
+  .float-animation-1 { animation: float1 6s ease-in-out infinite; }
+  .float-animation-2 { animation: float2 7s ease-in-out infinite; }
+  .btn-hover {
+    transition: all 0.3s ease;
+  }
+  .btn-hover:hover,
+  .btn-hover:active { /* 移动端长按/点击也有效果 */
+    color: #000 !important;
+    background-color: #fff !important;
+  }
+  .avatar-pulse {
+    animation: pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  }
+}
+
+@keyframes float1 {
+  0%, 100% { transform: translate(0, 0); }
+  50% { transform: translate(40px, -40px); }
+}
+
+@keyframes float2 {
+  0%, 100% { transform: translate(0, 0); }
+  50% { transform: translate(-50px, 50px); }
+}
+
+@keyframes pulse {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(255,255,255,0.1); }
+  50% { box-shadow: 0 0 0 20px rgba(255,255,255,0); }
+}
+
+.btnhonver{
+  transition: all .3s;
+}
+.btnhonver:hover{
+  background-color: #fff;
+  color: black;
+}
+
+/* ====================== 基础排版 ====================== */
+.post {
+  margin-top: 2em;
+  max-width: 38rem; /* 比原来的 29em 更舒适的可读宽度 */
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.post code {
+  background: #333;
+  color: #ddd;
+  padding: 0.15em 0.45em;
+  border-radius: 6px;
+  font-size: 0.9em;
+  font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace;
+}
+.post code::before { content: "<"; }
+.post code::after  { content: ">"; }
+
+.post-link {
+  color: #D8B9A4;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+.post-link:hover,
+.post-link:focus {
+  color: #fff;
+}
+
+/* ====================== 文章卡片 ====================== */
+.post-card {
+  background: rgba(51, 51, 51, 0.4);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px); /* Safari 支持 */
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 1.5rem;
+  padding: 1.75rem;
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  will-change: transform, background, border-color; /* 优化动画性能 */
+}
+
+.post-card:hover,
+.post-card:focus-within { /* 支持键盘导航 */
+  background: rgba(51, 51, 51, 0.6);
+  border-color: rgba(255, 255, 255, 0.3);
+  transform: translateY(-8px);
+}
+
+.post-card time {
+  font-size: 0.875rem;
+  opacity: 0.8;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.post-card h3 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin: 0 0 1rem;
+  line-height: 1.3;
+}
+
+.post-card p {
+  opacity: 0.9;
+  line-height: 1.7;
+  margin: 0;
+}
+
+.post-card-infomation{
+  display: flex;
+  flex-direction: row
+}
+
+/* ====================== 文章正文容器（标题 + 正文） ====================== */
+.post-header,
+.post-main,.comments {
+  width: 90vw;
+  max-width: 1000px;
+  margin: 2rem auto;
+  padding: 2.5rem 3rem;
+  background: #1F1F1F;
+  border-radius: 16px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+.post-header {
+  padding-bottom: 1.5rem;
+}
+
+.post-header-infomation {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+  font-size: 0.9rem;
+  opacity: 0.8;
+}
+
+.post-header-time,
+.post-header-class {
+  font-size: 0.85rem;
+}
+
+.post-header-title {
+  font-size: clamp(2rem, 5vw, 2.8rem); /* 自适应超大标题 */
+  font-weight: 800;
+  line-height: 1.2;
+  margin: 0;
+  color: #fff;
+}
+
+/* ====================== 响应式优化 ====================== */
+@media (max-width: 1024px) {
+  .post-header,
+  .post-main {
+    padding: 2rem 2.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .post-header,
+  .post-main {
+    width: 94vw;
+    max-width: none;
+    margin: 1.5rem auto;
+    padding: 2rem 1.5rem;
+    border-radius: 12px;
+  }
+
+  .post-card {
+    padding: 1.5rem;
+    border-radius: 1.25rem;
+  }
+
+  .post-card h3 {
+    font-size: 1.35rem;
+  }
+
+  .post-header-infomation {
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .post-header,
+  .post-main {
+    padding: 1.75rem 1.25rem;
+  }
+
+  .post-card {
+    padding: 1.25rem;
+  }
+
+  .post-header-title {
+    font-size: 1.9rem;
+  }
+
+  .post code {
+    font-size: 0.85em;
+    word-break: break-all;
+  }
+}
+
+/* ====================== 优化触摸反馈（移动端） ====================== */
+@media (hover: none) and (pointer: coarse) {
+  .post-card:active,
+  .btn-hover:active {
+    transform: translateY(-4px) scale(0.98);
+    transition: transform 0.1s;
+  }
+}
+
+/* ====================== 评论区整体容器 ====================== */
+#comments {
+  margin: 3rem auto;
+  max-width: 900px;
+  padding: 0 1rem;
+}
+
+.comment-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* ====================== 单条评论主体 ====================== */
+.comment-body {
+  margin: 1.5rem 0;
+  padding: 0;
+  list-style: none;
+}
+
+.comment-body:first-child { margin-top: 0; }
+
+#comment-520 { /* 任意 comment id 都适用，可删 */
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  padding: 1.25rem;
+  background: rgba(40, 40, 40, 0.45);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 1.25rem;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+/* 鼠标悬停 + 键盘焦点 + 移动端点击反馈 */
+.comment-body:hover > #comment-520,
+.comment-body:focus-within > #comment-520,
+.comment-body:active > #comment-520 {
+  background: rgba(50, 50, 50, 0.7);
+  border-color: rgba(255, 255, 255, 0.2);
+  transform: translateY(-4px);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.3);
+}
+
+/* ====================== 作者信息区 ====================== */
+.comment-author {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  flex-wrap: wrap;
+}
+
+.comment-author .avatar {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
+  border: 2px solid rgba(255, 255, 255, 0.15);
+  transition: border 0.3s;
+}
+
+.comment-author:hover .avatar {
+  border-color: #D8B9A4;
+}
+
+.comment-author cite.fn {
+  font-weight: 600;
+  font-style: normal;
+  font-size: 1rem;
+  color: #fff;
+}
+
+.comment-author cite.fn a {
+  color: inherit;
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: all 0.3s;
+}
+
+.comment-author cite.fn a:hover {
+  color: #D8B9A4;
+  border-color: #D8B9A4;
+}
+
+/* ====================== 元信息（时间 + 回复） ====================== */
+.comment-meta {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.comment-meta a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.comment-meta a:hover {
+  color: #D8B9A4;
+}
+
+.comment-reply a {
+  background: rgba(216, 185, 164, 0.15);
+  color: #D8B9A4;
+  padding: 0.35rem 0.85rem;
+  border-radius: 2rem;
+  font-size: 0.8rem;
+  font-weight: 500;
+  text-decoration: none;
+  transition: all 0.3s;
+}
+
+.comment-reply a:hover,
+.comment-reply a:focus {
+  background: #D8B9A4;
+  color: #000;
+}
+
+/* ====================== 评论正文 ====================== */
+.comment-body p {
+  margin: 0;
+  line-height: 1.75;
+  color: rgba(255, 255, 255, 0.92);
+  word-break: break-word;
+}
+
+/* 代码高亮（如果评论里有 code） */
+.comment-body p code {
+  background: rgba(0, 0, 0, 0.4);
+  padding: 0.15em 0.4em;
+  border-radius: 6px;
+  font-size: 0.9em;
+}
+
+/* ====================== 子评论（无限层级） ====================== */
+.comment-children {
+  margin: 1.5rem 0 0 2.5rem; /* 左侧缩进形成树状 */
+  padding-left: 0;
+  border-left: 2px solid rgba(216, 185, 164, 0.25);
+}
+
+.comment-children .comment-body {
+  margin: 1rem 0;
+}
+
+/* 越深的层级越窄，防止无限右移 */
+.comment-children .comment-children {
+  margin-left: 2rem;
+}
+
+/* ====================== 移动端极致优化 ====================== */
+@media (max-width: 768px) {
+  .comment-children {
+    margin-left: 1.5rem;
+  }
+  
+  .comment-children .comment-children {
+    margin-left: 1rem;
+  }
+  
+  #comment-520 {
+    padding: 1rem;
+    border-radius: 1rem;
+  }
+  
+  .comment-author .avatar {
+    width: 38px;
+    height: 38px;
+  }
+  
+  .comment-meta {
+    font-size: 0.8rem;
+    gap: 0.75rem;
+  }
+  
+  .comment-reply a {
+    padding: 0.3rem 0.75rem;
+    font-size: 0.75rem;
+  }
+}
+
+@media (max-width: 480px) {
+  #comments { padding: 0 0.75rem; }
+  
+  .comment-children {
+    margin-left: 1rem;
+    border-left-width: 1.5px;
+  }
+  
+  .comment-author {
+    gap: 0.65rem;
+  }
+  
+  .comment-author cite.fn {
+    font-size: 0.95rem;
+  }
+}
+
+/* ====================== 移动端点击反馈 ====================== */
+@media (hover: none) and (pointer: coarse) {
+  .comment-body:active > #comment-520 {
+    transform: translateY(-2px) scale(0.99);
+    transition: transform 0.15s;
+  }
+}
+
+/* ====================== 加载中状态（可选） ====================== */
+.comment-body.loading {
+  opacity: 0.6;
+  pointer-events: none;
+}
+.comment-body.loading::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.08), transparent);
+  animation: shimmer 1.5s infinite;
+}
+
+@keyframes shimmer {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(100%); }
+}
+
+/* ====================== 尊重用户减少动画偏好 ====================== */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
