@@ -1,3 +1,5 @@
+<span style="display:block;text-align:center;color:white;font-size:5em;">NanoHEX</span>
+
 # 鸣谢
 [奇趣保罗](https://paul.ren/)  
 对此他给出的意见是:  
