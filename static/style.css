@@ -465,7 +465,7 @@
 .article-main>blockquote {
     margin: 1.5em 0;
     padding: 1em 1.5em 1em 2em;
-    border-left: 5px solid #007bff;  /* 主色可改 */
+    border-left: 5px solid #d8b9a4;  /* 主色可改 */
     background-color: #444;
     font-style: italic;
     color: white;
@@ -477,7 +477,7 @@
 .article-main>blockquote:before {
     content: "“";
     font-size: 4em;
-    color: #007bff;
+    color: #d8b9a4;
     opacity: 0.3;
     position: absolute;
     left: 0px;
@@ -528,10 +528,313 @@ li::before {
   top: 0.65em;
   width: 6px;
   height: 6px;
-  background: #3b82f6;        /* 蓝色小圆点，可改颜色 */
+  background: #d8b9a4;        /* 蓝色小圆点，可改颜色 */
   border-radius: 50%;
 }
 
 .article-main>p>a{
   color: #D8B9A4 !important;
+}
+
+/* ====================== Markdown 内容核心样式 ====================== */
+/* 作用范围限定在文章正文，防止影响后台或其它页面 */
+.article-main {
+    line-height: 1.85;
+    font-size: 1.1rem;
+    color: #e0e0e0;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+
+/* 段落 */
+.article-main p {
+    margin: 1.4em 0;
+}
+
+/* 标题 - 与整体层级协调 */
+.article-main h1,
+.article-main h2,
+.article-main h3,
+.article-main h4,
+.article-main h5,
+.article-main h6 {
+    margin: 2.2em 0 1em 0;
+    font-weight: 700;
+    line-height: 1.3;
+    position: relative;
+}
+
+.article-main h1 { font-size: 2.2em; color: #ffffff; }
+.article-main h2 { font-size: 1.9em; color: #ffffff; border-bottom: 1px solid #444; padding-bottom: .4em; }
+.article-main h3 { font-size: 1.65em; color: #ffffff; }
+.article-main h4 { font-size: 1.45em; color: #ffffff; }
+.article-main h5 { font-size: 1.25em; }
+.article-main h6 { font-size: 1.1em; color: #ffffff; }
+
+/* 标题锚点小图标（可选） */
+.article-main h1:hover::before,
+.article-main h2:hover::before,
+.article-main h3:hover::before,
+.article-main h4:hover::before {
+    content: "#";
+    color: #d8b9a4;
+    position: absolute;
+    left: -1.2em;
+    opacity: 0;
+    transition: opacity .2s;
+}
+.article-main h1:hover::before,
+.article-main h2:hover::before,
+.article-main h3:hover::before,
+.article-main h4:hover::before { opacity: 1; }
+
+/* 链接 */
+.article-main a {
+    color: #d8b9a4;
+    text-underline-offset: none;
+    word-break: break-all;
+    transition: all .3s;
+}
+.article-main a:hover {
+    color: #ffffff;
+    background: rgba(127, 191, 255, 0.15);
+    border-radius: 4px;
+    padding: 0 4px;
+    margin: 0 -4px;
+}
+
+/* 强调 */
+.article-main strong,
+.article-main b {
+    color: #ffffff;
+    font-weight: 700;
+}
+
+/* 行内代码 */
+.article-main code:not([class*="language-"]) {
+    background: rgba(255,255,255,0.12);
+    color: #ff9d9d;
+    padding: 0.2em 0.45em;
+    border-radius: 6px;
+    font-size: 0.92em;
+    font-family: 'JetBrains Mono', 'Fira Code', ui-monospace, monospace;
+    border: 1px solid rgba(255,255,255,0.08);
+}
+
+/* 代码块 */
+.article-main pre {
+    margin: 1.8em 0;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.4);
+    position: relative;
+}
+
+.article-main pre code {
+    display: block;
+    padding: 1.6em;
+    padding: 1.4em;
+    background: #0d1117 !important;
+    color: #e6edf3;
+    font-size: 0.94em;
+    overflow-x: auto;
+    font-family: 'JetBrains Mono', 'Fira Code', Consolas, monospace;
+    line-height: 1.6;
+}
+
+/* Prism.js / Highlight.js 兼容（如果你用了代码高亮插件） */
+.article-main pre[class*="language-"] {
+    margin: 1.8em 0;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+/* 代码块左上角语言标签（可选美化） */
+.article-main pre::before {
+    content: attr(class);
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: rgba(255,255,255,0.1);
+    color: #aaa;
+    font-size: 0.75rem;
+    padding: 4px 10px;
+    border-radius: 0 0 0 8px;
+    backdrop-filter: blur(4px);
+}
+.article-main pre[class*="language-"]::before { content: attr(class); content: attr(class) / "" !important; }
+
+/* 引用块 */
+.article-main blockquote {
+    margin: 2em 0;
+    padding: 1.2em 1.5em 1.2em 2em;
+    border-left: 6px solid #d8b9a4;
+    background: #d8b9a41a;
+    border-radius: 0 12px 12px 0;
+    position: relative;
+    font-style: normal;
+}
+
+.article-main blockquote p {
+    margin: 0.8em 0;
+    color: #bbbbbb;
+}
+
+/* 大引号装饰 */
+.article-main blockquote::before {
+    content: "“";
+    font-family: Georgia, serif;
+    font-size: 5em;
+    color: #d8b9a476;
+    opacity: 0.15;
+    position: absolute;
+    left: 10px;
+    top: -20px;
+    line-height: 1;
+}
+
+/* 列表 */
+.article-main ul,
+.article-main ol {
+    margin: 1.6em 0;
+    padding-left: 2em;
+}
+
+.article-main ul li,
+.article-main ol li {
+    margin: 0.6em 0;
+    position: relative;
+}
+
+.article-main ul li::before {
+    content: "";
+    position: absolute;
+    left: -1.6em;
+    top: 0.75em;
+    width: 7px;
+    height: 7px;
+    background: #d8b9a4;
+    border-radius: 50%;
+}
+
+.article-main ol {
+    counter-reset: ol-counter;
+}
+
+.article-main ol li {
+    counter-increment: ol-counter;
+}
+
+.article-main ol li::before {
+    content: counter(ol-counter) ".";
+    position: absolute;
+    left: -2em;
+    color: #7fbfff;
+    font-weight: bold;
+    width: 2em;
+    text-align: right;
+}
+
+/* 任务列表 */
+.article-main input[type="checkbox"] {
+    margin-right: 0.6em;
+    accent-color: #d8b9a4;
+    transform: scale(1.2);
+}
+
+/* 分隔线 */
+.article-main hr {
+    border: none;
+    height: 1px;
+    background: linear-gradient(to right, transparent, #555, transparent);
+    margin: 3em 0;
+}
+
+/* 表格 */
+.article-main table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 2em 0;
+    font-size: 0.95em;
+    border-radius: 1px solid #444;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+}
+
+.article-main th,
+.article-main td {
+    padding: 1em;
+    text-align: left;
+    border-bottom: 1px solid #444;
+}
+
+.article-main th {
+    background: #d8b9a4;
+    color: #ffffff;
+    font-weight: 600;
+}
+
+.article-main tr:nth-child(even) {
+    background: rgba(255,255,255,0.03);
+}
+
+.article-main tr:hover {
+    background: rgba(59, 130, 246, 0.15);
+}
+
+/* 图片 */
+.article-main img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 12px;
+    margin: 2em auto;
+    display: block;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.6);
+    transition: transform 0.3s ease;
+}
+
+.article-main img:hover {
+    transform: scale(1.02);
+}
+
+/* 图注（Markdown 标准写法 <img alt="xxx"> 或 <figure>） */
+.article-main figure {
+    margin: 2.5em 0;
+    text-align: center;
+}
+
+.article-main figcaption {
+    margin-top: 0.8em;
+    color: #888;
+    font-size: 0.9em;
+    font-style: italic;
+}
+
+/* 删除线 */
+.article-main del,
+.article-main s {
+    color: #888;
+    text-decoration: line-through;
+}
+
+/* 脚注（如果用了脚注插件） */
+.article-main .footnote-ref a {
+    color: #7fbfff;
+    font-size: 0.8em;
+    vertical-align: super;
+}
+.article-main .footnote-item {
+    font-size: 0.9em;
+    color: #aaa;
+}
+
+/* 响应式表格在手机上横向滚动 */
+@media (max-width: 768px) {
+    .article-main table {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
 }
