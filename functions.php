@@ -13,7 +13,7 @@ function themeConfig($form) {
     $index_des = new Typecho_Widget_Helper_Form_Element_Text(
         'index_des', NULL, 'just so so...',
         _t('首页大屏描述'),
-        _t('显示在首页大屏幕下方的描述文字')
+        _t('显示在首页大屏幕和footer的描述文字')
     );
     $form->addInput($index_des);
 
@@ -131,4 +131,12 @@ function themeConfig($form) {
     });
     </script>
     <?php
+
+    // 首页大屏描述
+    $index_icp = new Typecho_Widget_Helper_Form_Element_Text(
+        'index_icp', NULL, '',
+        _t('ICP备案'),
+        _t('没有就不需要填写')
+    );
+    $form->addInput($index_icp);
 }

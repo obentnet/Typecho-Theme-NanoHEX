@@ -3,7 +3,7 @@
     <div class="max-w-5xl mx-auto px-6 py-10 text-center text-sm text-gray-500">
       <p>
         &copy; <?php echo date('Y'); ?> <span class="text-white font-medium"><?php $this->options->title() ?></span> · 
-        <span class="text-accent">I Am Because You Are.</span>
+        <span class="text-accent"><?php $this->options->index_des() ?></span>
       </p>
       <p class="mt-3">
         Powered by 
@@ -12,7 +12,7 @@
         <a href="https://github.com/obentnet/nanohex" target="_blank" class="text-gray-400 hover:text-white transition">NanoHEX</a>
       </p>
       <p class="mt-4 text-xs opacity-70">
-        备案号：<a href="https://beian.miit.gov.cn" target="_blank" class="hover:text-white">粤ICP备xxxxxxx号</a>（没有就删掉这行）
+        <a href="https://beian.miit.gov.cn/"><?php $this->options->index_icp() ?></a>
       </p>
     </div>
 

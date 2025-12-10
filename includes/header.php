@@ -11,7 +11,7 @@
              ->to($pages); ?>
         <?php while($pages->next()): ?>
             <a href="<?php $pages->permalink(); ?>"
-               class="<?php echo $this->is('page', $pages->slug) ? 'text-white' : 'text-gray-400 hover:text-white'; ?> transition">
+               class="<?php echo $this->is('page', $pages->slug) ? 'text-white' : 'text-gray-400 hover:text-white;'; ?> transition">
                 <?php $pages->title(); ?>
             </a>
         <?php endwhile; ?>

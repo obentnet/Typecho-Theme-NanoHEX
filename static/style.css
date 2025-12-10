@@ -111,7 +111,17 @@
 }
 
 /* ====================== 文章正文容器（标题 + 正文） ====================== */
-.post-header,
+.post-header{
+  width: 90vw;
+  max-width: 1000px;
+  margin: 2rem auto;
+  padding: 2.5rem 3rem;
+  
+  border-radius: 16px;
+  
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
 .post-main,.comments {
   width: 90vw;
   max-width: 1000px;
