@@ -139,4 +139,36 @@ function themeConfig($form) {
         _t('没有就不需要填写')
     );
     $form->addInput($index_icp);
+
+
+    
+
+    // donate
+    $donate_weixin = new Typecho_Widget_Helper_Form_Element_Text(
+        'donate_weixin', NULL, 'https://cdn.uegee.com/anheyu/WeChatPAY.png',
+        _t('微信二维码'),
+        _t('没有就不需要填写')
+    );
+    $form->addInput($donate_weixin);
+
+    $donate_alipay = new Typecho_Widget_Helper_Form_Element_Text(
+        'donate_alipay', NULL, 'https://cdn.uegee.com/anheyu/AliPay.png',
+        _t('支付宝二维码'),
+        _t('没有就不需要填写')
+    );
+    $form->addInput($donate_alipay);
+
+    $donate_usdt = new Typecho_Widget_Helper_Form_Element_Text(
+        'donate_usdt', NULL, 'https://img.uegee.com/i/2025/11/21/gpjmyi.png',
+        _t('USDT(TORN)二维码'),
+        _t('没有就不需要填写')
+    );
+    $form->addInput($donate_usdt);
+
+    $donate_qq = new Typecho_Widget_Helper_Form_Element_Text(
+        'donate_qq', NULL, 'https://cdn.uegee.com/anheyu/QQPay.png',
+        _t('USDT(TORN)二维码'),
+        _t('没有就不需要填写')
+    );
+    $form->addInput($donate_qq);
 }

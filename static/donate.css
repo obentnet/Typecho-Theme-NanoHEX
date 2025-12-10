@@ -1,0 +1,266 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.6;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+a{
+    color: #E0E0E0;
+    text-decoration: none;
+}
+a:hover{
+    color: #2D2D2D;
+}
+
+/* 白天主题 */
+.theme-light {
+    background: #ffffff;
+    color: #1a1a1a;
+}
+
+.theme-light .container {
+    background: #ffffff;
+}
+
+.theme-light .qr-container {
+    background: #f8f9fa;
+    border: 1px solid #e9ecef;
+}
+
+.theme-light .qr-code {
+    background: #ffffff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.theme-light .payment-btn {
+    background: #f8f9fa;
+    border: 1px solid #e9ecef;
+    color: #495057;
+}
+
+.theme-light .payment-btn:hover {
+    background: #e9ecef;
+}
+
+.theme-light .payment-btn.active {
+    background: #007bff;
+    color: white;
+    border-color: #007bff;
+}
+
+.theme-light .instructions {
+    background: #f8f9fa;
+    border: 1px solid #e9ecef;
+    color: #495057;
+}
+
+.theme-light .instructions h3 {
+    color: #212529;
+}
+
+.theme-light .theme-toggle {
+    background: #f8f9fa;
+    border: 1px solid #e9ecef;
+    color: #495057;
+}
+
+/* 暗夜主题 */
+.theme-dark {
+    background: #121212;
+    color: #e0e0e0;
+}
+
+.theme-dark .container {
+    background: #1e1e1e;
+}
+
+.theme-dark .qr-container {
+    background: #2d2d2d;
+    border: 1px solid #3a3a3a;
+}
+
+.theme-dark .qr-code {
+    background: #252525;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.theme-dark .payment-btn {
+    background: #2d2d2d;
+    border: 1px solid #3a3a3a;
+    color: #e0e0e0;
+}
+
+.theme-dark .payment-btn:hover {
+    background: #3a3a3a;
+}
+
+.theme-dark .payment-btn.active {
+    background: #0d6efd;
+    color: white;
+    border-color: #0d6efd;
+}
+
+.theme-dark .instructions {
+    background: #2d2d2d;
+    border: 1px solid #3a3a3a;
+    color: #b0b0b0;
+}
+
+.theme-dark .instructions h3 {
+    color: #ffffff;
+}
+
+.theme-dark .theme-toggle {
+    background: #2d2d2d;
+    border: 1px solid #3a3a3a;
+    color: #e0e0e0;
+}
+
+.container {
+    max-width: 600px;
+    width: 100%;
+    text-align: center;
+    padding: 40px 30px;
+    border-radius: 20px;
+}
+
+h1 {
+    font-size: 28px;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.subtitle {
+    font-size: 16px;
+    margin-bottom: 40px;
+    font-weight: 400;
+}
+
+.qr-container {
+    border-radius: 16px;
+    padding: 24px;
+    margin: 0 auto 32px;
+    display: inline-block;
+}
+
+.qr-code {
+    width: 200px;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+}
+
+.qr-img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+.payment-options {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    margin-bottom: 32px;
+    flex-wrap: wrap;
+}
+
+.payment-btn {
+    border-radius: 12px;
+    padding: 12px 20px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.payment-btn:hover {
+    transform: translateY(-2px);
+}
+
+.instructions {
+    border-radius: 12px;
+    padding: 20px;
+    text-align: left;
+    font-size: 14px;
+}
+
+.instructions h3 {
+    font-size: 16px;
+    margin-bottom: 12px;
+    font-weight: 600;
+}
+
+.instructions ol {
+    padding-left: 20px;
+}
+
+.instructions li {
+    margin-bottom: 8px;
+    line-height: 1.5;
+}
+
+.theme-toggle {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    border-radius: 12px;
+    padding: 8px 16px;
+    font-size: 14px;
+    cursor: pointer;
+    font-weight: 500;
+    z-index: 10;
+}
+
+.copy{
+    margin:0;
+    padding-top: 1em;
+    font-size: 13px;
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 30px 20px;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    .qr-code {
+        width: 180px;
+        height: 180px;
+    }
+
+    .payment-options {
+        gap: 12px;
+    }
+
+    .payment-btn {
+        padding: 10px 16px;
+        font-size: 13px;
+    }
+
+    .theme-toggle {
+        top: 15px;
+        right: 15px;
+        padding: 6px 12px;
+        font-size: 12px;
+    }
+}
+

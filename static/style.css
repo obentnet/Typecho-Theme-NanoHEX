@@ -459,3 +459,79 @@
     transition-duration: 0.01ms !important;
   }
 }
+
+
+/* Post CSS */
+.article-main>blockquote {
+    margin: 1.5em 0;
+    padding: 1em 1.5em 1em 2em;
+    border-left: 5px solid #007bff;  /* 主色可改 */
+    background-color: #444;
+    font-style: italic;
+    color: white;
+    line-height: 1.6;
+    position: relative;
+}
+
+/* 可选：加上大引号装饰 */
+.article-main>blockquote:before {
+    content: "“";
+    font-size: 4em;
+    color: #007bff;
+    opacity: 0.3;
+    position: absolute;
+    left: 0px;
+    top: -10px;
+    font-family: Georgia, serif;
+}
+
+.article-main>h1{
+  font-size: 3em;
+}
+.article-main>h2{
+  font-size: 2.5em;
+}
+.article-main>h3{
+  font-size: 2em;
+}
+.article-main>h4{
+  font-size: 1.5em;
+}
+.article-main>h5{
+  font-size: 1em;
+}
+
+code {
+  font-family: 'JetBrains Mono', 'Fira Code', Consolas, monospace;
+  background-color: #000;
+  padding: 0.1em 0.5em;
+  margin: 0 0.3em;
+  border-radius: 0.3em;
+}
+
+ul {
+  list-style: none;
+  padding-left: 1.5rem;
+}
+
+li {
+  position: relative;
+  padding-left: 1rem;
+  line-height: 1.6;
+  margin-bottom: 0.5rem;
+}
+
+li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.65em;
+  width: 6px;
+  height: 6px;
+  background: #3b82f6;        /* 蓝色小圆点，可改颜色 */
+  border-radius: 50%;
+}
+
+.article-main>p>a{
+  color: #D8B9A4 !important;
+}

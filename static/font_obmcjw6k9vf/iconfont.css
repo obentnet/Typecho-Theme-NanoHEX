@@ -1,0 +1,81 @@
+@font-face {
+  font-family: "iconfont"; /* Project id  */
+  src: url('iconfont.ttf?t=1763868110091') format('truetype');
+}
+
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-weixin:before {
+  content: "\f0106";
+}
+
+.icon-zhifubaozhifu:before {
+  content: "\e65e";
+}
+
+.icon-zhifubaozhifu1:before {
+  content: "\e654";
+}
+
+.icon-btc:before {
+  content: "\e649";
+}
+
+.icon-zhifubaozhifu2:before {
+  content: "\e64f";
+}
+
+.icon-github:before {
+  content: "\e691";
+}
+
+.icon-zhifubaozhifu3:before {
+  content: "\e634";
+}
+
+.icon-GitHub:before {
+  content: "\ea0a";
+}
+
+.icon-QQ:before {
+  content: "\e882";
+}
+
+.icon-github-fill:before {
+  content: "\e885";
+}
+
+.icon-btc1:before {
+  content: "\e8d5";
+}
+
+.icon-zanzhu:before {
+  content: "\e54c";
+}
+
+.icon-QQ1:before {
+  content: "\e876";
+}
+
+.icon-USDT:before {
+  content: "\e63d";
+}
+
+.icon-btc2:before {
+  content: "\e63a";
+}
+
+.icon-USDT1:before {
+  content: "\e7f8";
+}
+
+.icon-weixin1:before {
+  content: "\e607";
+}
+
