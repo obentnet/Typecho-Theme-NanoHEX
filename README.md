@@ -19,6 +19,10 @@
 
 同时欢迎前往 [Donate](https://ueg.ee?donate) 为我提供赞助，谢谢您！
 
+# UPDATE
+beta 1.2
+ - 改用[ZeComments](https://github.com/jrotty/ZeComments) 作为评论功能模板
+
 # 鸣谢
 [泽泽社](https://store.typecho.work/about.html)  [奇趣保罗](https://paul.ren/)  
 对于此主题，保罗给出了珍贵的意见如下:  
