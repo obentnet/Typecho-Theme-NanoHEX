@@ -17,6 +17,7 @@
     </div>
 
     <?php $this->footer(); ?>
+    
   </footer>
 </body>
 
