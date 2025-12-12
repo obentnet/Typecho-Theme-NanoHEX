@@ -38,8 +38,7 @@ function themeConfig($form) {
         <strong>每行一个按钮，格式：链接|按钮文字|Font Awesome 图标类名</strong><br>
         示例：<br>
         https://steamcommunity.com/id/do0rtea/|STEAM|fa fa-steam<br>
-        https://github.com/用户名|GitHub|fa fa-github<br>
-        https://space.bilibili.com/123456|Bilibili|fa fa-bilibili<br>
+        https://github.com/obentnet|GitHub|fa fa-github<br>
         <a href="https://fontawesome.com/v4/icons/" target="_blank">点此查看所有图标类名</a>
         ')
     );
