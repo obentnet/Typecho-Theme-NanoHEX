@@ -1,4 +1,4 @@
- <!-- Footer 版权声明（始终居底） -->
+
   <footer class="mt-auto w-full bg-black/60 backdrop-blur-md border-t border-white/10">
     <div class="max-w-5xl mx-auto px-6 py-10 text-center text-sm text-gray-500">
       <p>

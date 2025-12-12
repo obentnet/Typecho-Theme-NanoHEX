@@ -11,7 +11,7 @@
 if (!defined('__TYPECHO_ROOT_DIR__')) exit;
 $this->need('includes/head.php');
 ?>
-<!-- 首屏 -->
+
   <section id="home" class="min-h-screen flex flex-col items-center justify-center px-4 md:px-8 relative">
     <div class="container mx-auto max-w-5xl flex flex flex-col md:flex-row items-center justify-between relative z-10">
       <div
@@ -22,13 +22,8 @@ $this->need('includes/head.php');
           <p class="text-accent text-lg md:text-xl mt-2 tracking-widest"><?php $this->options->index_des() ?></p>
         </div>
 
-        <!-- 首页按钮组 - 完全保留你原来的完美排版 -->
 <div class="flex flex-wrap justify-center md:block gap-3 md:gap-4 mb-8">
-    <?php 
-    // 先输出你原来的几个固定按钮（Blog / RSS / GitHub）
-    ?>
 
-    <!-- 下面开始动态输出设置面板里添加的按钮 -->
     <?php if ($this->options->custom_buttons): 
         $lines = array_filter(array_map('trim', explode("\n", $this->options->custom_buttons)));
         foreach ($lines as $btn):

@@ -1,7 +1,6 @@
 <?php
 function themeConfig($form) {
 
-    // 首页大屏文字
     $index_word = new Typecho_Widget_Helper_Form_Element_Text(
         'index_word', NULL, 'Hi!',
         _t('首页大屏文字'),
@@ -9,7 +8,6 @@ function themeConfig($form) {
     );
     $form->addInput($index_word);
 
-    // 首页大屏描述
     $index_des = new Typecho_Widget_Helper_Form_Element_Text(
         'index_des', NULL, 'just so so...',
         _t('首页大屏描述'),
@@ -17,7 +15,6 @@ function themeConfig($form) {
     );
     $form->addInput($index_des);
 
-    // 首页大屏头像
     $index_headpic = new Typecho_Widget_Helper_Form_Element_Text(
         'index_headpic', NULL, 'https://cdn.uegee.com/head.jpg',
         _t('首页大屏头像'),
@@ -26,7 +23,6 @@ function themeConfig($form) {
     $form->addInput($index_headpic);
 
 
-    // ====================== 可无限添加按钮（推荐写法：用 Textarea） ======================
     $defaultButtons = "https://steamcommunity.com/id/do0rtea/|STEAM|fa fa-steam\nhttps://github.com/username|GitHub|fa fa-github\nhttps://twitter.com/username|Twitter|fa fa-twitter";
 
     $custom_buttons = new Typecho_Widget_Helper_Form_Element_Textarea(
@@ -45,7 +41,6 @@ function themeConfig($form) {
     $form->addInput($custom_buttons);
     ?>
 
-    <!-- 美化 Textarea 为可增删的输入框（完美解决兼容性问题） -->
     <script>
     document.addEventListener('DOMContentLoaded', function() {
         var textarea = document.querySelector('textarea[name="custom_buttons"]');
@@ -131,7 +126,6 @@ function themeConfig($form) {
     </script>
     <?php
 
-    // 首页大屏描述
     $index_icp = new Typecho_Widget_Helper_Form_Element_Text(
         'index_icp', NULL, '',
         _t('ICP备案'),
@@ -139,10 +133,6 @@ function themeConfig($form) {
     );
     $form->addInput($index_icp);
 
-
-    
-
-    // donate
     $donate_weixin = new Typecho_Widget_Helper_Form_Element_Text(
         'donate_weixin', NULL, 'https://cdn.uegee.com/anheyu/WeChatPAY.png',
         _t('微信二维码'),

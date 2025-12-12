@@ -1,4 +1,4 @@
-<!-- 吸顶导航 -->
+
 <div class="sticky top-0 z-50 bg-black/80 backdrop-blur-xl border-b border-white/10 py-6">
   <div class="max-w-5xl mx-auto px-6 flex items-center justify-between">
     <h3 class="text-2xl md:text-3xl font-bold tracking-tight"><?php $this->options->title() ?></h3>
