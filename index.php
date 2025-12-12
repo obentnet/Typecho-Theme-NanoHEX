@@ -27,10 +27,6 @@ $this->need('includes/head.php');
     <?php 
     // 先输出你原来的几个固定按钮（Blog / RSS / GitHub）
     ?>
-    <a href="https://uegee.com/" target="_blank"
-       class="btnhonver bg-secondary text-white px-6 py-3 rounded-md inline-block text-center">
-        <i class="fa fa-home mr-2"></i>Blog
-    </a>
 
     <!-- 下面开始动态输出设置面板里添加的按钮 -->
     <?php if ($this->options->custom_buttons): 
