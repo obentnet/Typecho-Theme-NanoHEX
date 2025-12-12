@@ -1,6 +1,9 @@
 # NanoHEX
 一个简易，简洁的 Typecho 博客主题
 
+[预览主题 - 官方](https://jk.uegee.com/nanohex)  
+[预览主题 - Typecho主题预览](https://demo.typecho.work/?theme=NanoHEX) (预览版本可能过旧，建议下载安装)
+
 # 使用方法
 
 1. `star`此项目
@@ -11,6 +14,9 @@
 
 # 主题亮点
 基于 `豆包` \ `Grok` \ `Qwen` \ `Gemini` \ `DeepSeek` 制作的主题
+
+特色页面：  
+赞助页面[page-donate.php]
 
 # 开源协议
 本项目采用 MIT 开源协议进行授权，并在其基础上须保留原作者的版权注释（CSS、JS 等文件），当然能在页尾写上主题地址就是最好的啦~
