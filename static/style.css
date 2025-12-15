@@ -1,3 +1,4 @@
+/* new background color important */
 @layer utilities {
   .float-animation-1 { animation: float1 6s ease-in-out infinite; }
   .float-animation-2 { animation: float2 7s ease-in-out infinite; }
