@@ -1,5 +1,4 @@
 # NanoHEX
-![screen](https://raw.githubusercontent.com/obentnet/Typecho-Theme-NanoHEX/refs/heads/main/static/screen.png)
 
 一个简易，简洁的 Typecho 博客主题  
 
@@ -21,6 +20,10 @@
 
 特色页面：  
 [赞助页面](/page-donate.php)、[友情链接页面](/page-donate.php) 需配合 [links](https://github.com/Mejituu/Links) 插件使用。
+
+# 界面截图
+![screen](https://raw.githubusercontent.com/obentnet/Typecho-Theme-NanoHEX/refs/heads/main/static/screen.png)
+
 
 # 开源协议
 本项目采用 MIT 开源协议进行授权，并在其基础上须保留原作者的版权注释（CSS、JS 等文件），当然能在页尾写上主题地址就是最好的啦~
