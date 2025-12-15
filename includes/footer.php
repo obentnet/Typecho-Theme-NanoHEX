@@ -16,6 +16,22 @@
       </p>
     </div>
 
+    <script>
+      $(function() {
+          $(document).pjax('a[target!=_blank][rel!=nofollow]', '#main', { // '#main'替换为你主题的内容容器ID
+              fragment: '#main',
+              timeout: 8000
+          });
+        
+          $(document).on('pjax:complete', function() {
+              // 这里重新初始化需要刷新的功能，如代码高亮、懒加载、评论等
+              // 示例：if (typeof hljs !== 'undefined') hljs.initHighlighting();
+              // 滚动到顶部
+              window.scrollTo(0, 0);
+          });
+      });
+    </script>
+
     <?php $this->footer(); ?>
     
   </footer>
