@@ -16,7 +16,7 @@
 基于 `豆包` \ `Grok` \ `Qwen` \ `Gemini` \ `DeepSeek` 制作的主题
 
 特色页面：  
-赞助页面[page-donate.php]
+[赞助页面](/page-donate.php)
 
 # 开源协议
 本项目采用 MIT 开源协议进行授权，并在其基础上须保留原作者的版权注释（CSS、JS 等文件），当然能在页尾写上主题地址就是最好的啦~
@@ -29,7 +29,13 @@
 beta 1.2
  - 改用[ZeComments](https://github.com/jrotty/ZeComments) 作为评论功能模板
 
+beta 1.3
+ - 修改头部问题
+ - 新增ajax无刷新加载
+ - 新增标签集页面
+ - 新增分类列表
+
 # 鸣谢
-[泽泽社](https://store.typecho.work/about.html)  [奇趣保罗](https://paul.ren/)  
+[泽泽社](https://github.com/jrotty)  [奇趣保罗](https://github.com/Dreamer-Paul/)  
 对于此主题，保罗给出了珍贵的意见如下:  
 ![paul_is_dog8](https://img.uegee.com/i/2025/12/10/10myj3q.png)
