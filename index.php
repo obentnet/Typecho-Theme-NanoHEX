@@ -82,6 +82,7 @@ $this->need('includes/header.php');
             <a href="<?php $this->permalink() ?>" class="post-link"><?php $this->title() ?></a>
           </h3>
           <p class="text-gray-300 leading-relaxed"><?php $this->excerpt(50, '...'); ?></p>
+          <tag style="font-size:12.5px;margin-top:1em;color:rgb(102 102 102 / var(--tw-text-opacity, 1));background-color:rgb(51 51 51 / var(--tw-bg-opacity, 1));padding:0.5em 1em;"><?php $this->tags(',', true, '暂无标签~'); ?></tag>
         </article>
         
         <?php endwhile; ?>
