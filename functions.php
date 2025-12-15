@@ -1,6 +1,20 @@
 <?php
 function themeConfig($form) {
 
+    $site_favicon = new Typecho_Widget_Helper_Form_Element_Text(
+        'site_favicon', NULL, 'https://cdn.uegee.com/favicon.ico',
+        _t('favicon'),
+        _t('标签页图标')
+    );
+    $form->addInput($site_favicon);
+
+    $background_color = new Typecho_Widget_Helper_Form_Element_Text(
+        'background_color', NULL, '#141414',
+        _t('背景色'),
+        _t('16进制，默认#141414')
+    );
+    $form->addInput($background_color);
+
     $index_word = new Typecho_Widget_Helper_Form_Element_Text(
         'index_word', NULL, 'Hi!',
         _t('首页大屏文字'),
