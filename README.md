@@ -1,6 +1,7 @@
 # NanoHEX
 <img text-align="center" src="./static/logo.svg"/>
-一个简易，简洁的 Typecho 博客主题
+一个简易，简洁的 Typecho 博客主题  
+
 ![screen](https://raw.githubusercontent.com/obentnet/Typecho-Theme-NanoHEX/refs/heads/main/static/screen.png)
 
 [预览主题 - 官方](https://jk.uegee.com/nanohex)  
