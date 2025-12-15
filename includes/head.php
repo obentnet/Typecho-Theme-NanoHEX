@@ -18,16 +18,11 @@
 <script src="https://cdn.tailwindcss.com"></script>
 <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
 <link rel="stylesheet" href="<?php $this->options->themeUrl('static/style.css?v=22'); ?>">
-<meta name="description" content="狱杰的小页,UEG.EE">
-<meta name="keywords" content="狱杰,狱杰的小页,uegee">
-<meta name="author" content="狱杰UEGEE">
-<link rel="apple-touch-icon" sizes="180x180" href="https://cdn.uegee.com/head.jpg">
+<link rel="shortcut icon" href="<?php $this->options->site_favicon() ?>" type="image/x-icon">
+<link rel="apple-touch-icon" sizes="180x180" href="<?php $this->options->site_favicon() ?>">
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery-pjax@2.0.1/jquery.pjax.min.js"></script>
 <meta name="theme-color" content="#333333">
-<meta property="og:type" content="website">
-<meta property="og:title" content="狱杰的小页">
-<meta property="og:description" content="Hi!这是我的小页">
-<meta property="og:url" content="https://ueg.ee/">
-<meta property="og:image" content="https://cdn.uegee.com/head.jpg">
 <?php $this->header(); ?>
   <script>
     tailwind.config = {
@@ -42,6 +37,12 @@
       }
     }
   </script>
+<style>
+  .bg-black{
+    --tw-bg-opacity： 1;
+    background-color: <?php $this->options->background_color() ?> !important;
+  }
+</style>
 </head>
 
-<body class="bg-black text-white">
+<body class="bg-black text-white" id="main">
