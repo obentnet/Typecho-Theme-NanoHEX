@@ -36,6 +36,7 @@ beta 1.3
  - 新增ajax无刷新加载
  - 新增标签集页面
  - 新增分类列表
+ - 新增友情链接
 
 # 鸣谢
 [泽泽社](https://github.com/jrotty)  [奇趣保罗](https://github.com/Dreamer-Paul/)  
