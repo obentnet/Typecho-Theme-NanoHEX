@@ -74,7 +74,7 @@ a.ze-user-name {
     margin-top: .25rem;
     margin-bottom: .25rem;
     border-radius: .25rem;
-    background-color: var(--text-bg, #d8b9a4d7);
+    background-color: var(--text-bg, #dbdbdbd7);
     padding: .5rem 1rem;
     font-size: calc(var(--text-size, 14px));
     color: var(--text-color, #374151)
@@ -194,7 +194,7 @@ a.ze-user-name {
     border-radius: .25rem;
     border-width: 0;
     background-color: transparent;
-    background-color: var(--input-bg, #d8b9a49b);
+    background-color: var(--input-bg, #d0d0d09b);
     padding: .5rem .375rem;
     font-size: calc(var(--text-input-size, 14px));
     color: var(--input-text, #374151);
@@ -204,7 +204,7 @@ a.ze-user-name {
 }
 
 .ze-textarea:hover{
-    background-color: var(--input-bg, #d8b9a4d7);
+    background-color: var(--input-bg, #cfcfcfd7);
 }
 
 .ze-textarea::-moz-placeholder {

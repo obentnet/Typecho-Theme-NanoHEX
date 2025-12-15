@@ -129,6 +129,14 @@ $this->need('includes/header.php');
 echo Links_Plugin::output('<div class="post-link-card"><div class="post-link-card-icon"><img src="{image}" alt="站点图标"></div><div class="post-link-card-content"><h3>{name}</h3><p>{description}</p></div><a href="{url}" target="_blank">访问站点</a></div>','','','','HTML'); ?>
     </div>
 
+    <div class="post-main">
+        <div class="article-main">
+            <?php $this->content(); ?>
+        </div>
+    </div>
+<div class="comments">
+    <?php $this->need('comments.php');?>
+</div>
 
 <?php $this->need('includes/footer.php'); ?>
 
